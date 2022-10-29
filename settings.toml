@@ -1,0 +1,3 @@
+[default]
+POSTGRES_USERNAME= "kiracidan_api"
+POSTGRES_PASSWORD= "kiracidan_password"

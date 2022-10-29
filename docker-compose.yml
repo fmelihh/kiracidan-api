@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=kiracidan_api
+      - POSTGRES_PASSWORD=kiracidan_password
+    ports:
+      - 5433:5432
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql
