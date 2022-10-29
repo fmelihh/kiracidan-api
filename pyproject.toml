@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "kiracidan-api"
+version = "0.1.0"
+description = ""
+authors = ["fmelihh <furkanmelihercan.98@gmail.com>"]
+readme = "README.md"
+packages = [{include = "kiracidan_api"}]
+
+[tool.poetry.dependencies]
+python = "3.8.10"
+fastapi = "^0.85.1"
+pydantic = "^1.10.2"
+uvicorn = "^0.19.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
