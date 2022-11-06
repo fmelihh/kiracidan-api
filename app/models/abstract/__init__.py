@@ -1,1 +1,1 @@
-from .user import User
+from .base_user import Mixin

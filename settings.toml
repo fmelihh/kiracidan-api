@@ -5,4 +5,4 @@ POSTGRES_PASSWORD= "kiracidan_password"
 SECRET = "abc"
 TOKEN_EXP = 1
 
-POSTGRE_URL = "postgres://kiracidan_api:kiracidan_password@localhost:5432"
+POSTGRE_URL = "postgresql://kiracidan_api:kiracidan_password@localhost:5432"
