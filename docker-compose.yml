@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   postgres:
     image: postgres:latest
@@ -5,6 +7,19 @@ services:
       - POSTGRES_USER=kiracidan_api
       - POSTGRES_PASSWORD=kiracidan_password
     ports:
-      - 5432:5432
+      - '5432:5432'
     volumes:
       - ./data/postgresql:/var/lib/postgresql
+
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes:
+      - redis:/data
+
+volumes:
+  redis:
+    driver: local

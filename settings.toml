@@ -1,8 +1,11 @@
 [default]
 POSTGRES_USERNAME= "kiracidan_api"
 POSTGRES_PASSWORD= "kiracidan_password"
-
-SECRET = "abc"
-TOKEN_EXP = 1
-
 POSTGRE_URL = "postgresql://kiracidan_api:kiracidan_password@localhost:5432"
+
+REDIS_PASSWORD = "eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81"
+REDIS_PORT = 6379
+
+TOKEN_SECRET = "efd38e8e2b5d8c6d25abe49bb139c5ff6277f5e7af3ee3d385cdde619c6ceaa1"
+TOKEN_ALGORITHM = "HS256"
+TOKEN_EXPIRED_MINUTES = 120
