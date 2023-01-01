@@ -17,7 +17,7 @@ depends_on = None
 
 
 def upgrade() -> None:
-    op.add_column('payments', sa.Column('user_id', Integer, ForeignKey("user.id"), nullable=False))
+    op.add_column('payments', sa.Column('user_id', Integer, ForeignKey("user_service.id"), nullable=False))
 
 
 def downgrade() -> None:

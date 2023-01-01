@@ -1,6 +1,7 @@
 from app.core.auth import HOME_OWNER_ROLE, TENANT_ROLE, Handler, HandlerPayloadResponse, EncodedTokenResponse, DecodedTokenResponse
 from unittest import TestCase
 
+
 class TestAuthentication(TestCase):
     def setUp(self) -> None:
         self.handler = Handler()
@@ -18,6 +19,7 @@ class TestAuthentication(TestCase):
         print(token.to_dict())
         self.assertIn("token", token.to_dict())
         self.assertIsInstance(token.token, str)
+
     def test_decode_token(self):
         navigator = "token_decode"
         user_info: DecodedTokenResponse = self.handler.handle(payload=HandlerPayloadResponse(
@@ -32,7 +34,6 @@ class TestAuthentication(TestCase):
         self.assertIn("token_type", user_info.to_dict())
         self.assertIsInstance(user_info.to_dict()["email"], str)
         self.assertIsInstance(user_info.to_dict()["token_type"], str)
-
 
     def test_check(self):
         pass

@@ -21,8 +21,8 @@ def upgrade() -> None:
     op.create_table(
         'comments',
         sa.Column('id', Integer, primary_key=True, unique=True, nullable=False, autoincrement=True),
-        sa.Column('user_who_commented_id', Integer, ForeignKey("user.id")),
-        sa.Column('commented_user_id', Integer, ForeignKey("user.id")),
+        sa.Column('user_who_commented_id', Integer, ForeignKey("user_service.id")),
+        sa.Column('commented_user_id', Integer, ForeignKey("user_service.id")),
         sa.Column('rating', Integer, nullable=False),
         sa.Column('user_comment', String(1000), nullable=True),
     )

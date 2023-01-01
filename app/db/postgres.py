@@ -12,13 +12,13 @@ Session = sessionmaker(engine)
 
 
 @contextmanager
-def transaction_scope(session, close_at_exit=False):
+def transaction_scope():
+    session = Session()
     try:
         yield session
         session.commit()
     except Exception as e:
         session.rollback()
-        raise
+        raise e
     finally:
-        if close_at_exit:
-            session.close()
+        session.close()

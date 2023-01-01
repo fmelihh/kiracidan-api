@@ -6,6 +6,7 @@ class HandlerPayloadResponse(AbstractHandlerPayload):
         self.handler_name = handler_name
         self.role_type: str = role_type
         self.params = kwargs
+
     def to_dict(self):
         return {
             "handler_name": self.handler_name,

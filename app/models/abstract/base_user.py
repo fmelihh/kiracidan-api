@@ -21,7 +21,7 @@ class Mixin(Base):
     @abstractmethod
     def to_dict(self) -> Dict[str, Any]:
         """
-        Returns the attributes of each user table in dict form
+        Returns the attributes of each user_service table in dict form
         :return:
         """
         pass

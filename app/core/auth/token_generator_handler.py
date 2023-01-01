@@ -6,6 +6,7 @@ import datetime
 from .abstract import  AbstractHandler
 from .token_response import HandlerPayloadResponse, DecodedTokenResponse, EncodedTokenResponse
 
+
 class TokenGenerationHandler(AbstractHandler):
     _next_handler = None
 

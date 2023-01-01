@@ -18,4 +18,3 @@ class Comments(Mixin):
             "rating": self.rating,
             "user_comment": self.user_comment,
         }
-
